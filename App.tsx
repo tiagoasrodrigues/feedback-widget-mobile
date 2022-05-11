@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
@@ -6,7 +8,7 @@ import * as Font from 'expo-font';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 
 import { theme } from './src/theme';
-import { Widget } from './src/components/Widget';
+import Widget  from './src/components/Widget';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -41,7 +43,7 @@ export default function App() {
 
   return (
     <View
-      style={{flex: 1, backgroundColor: theme.colors.background}}
+      style={{ flex: 1, backgroundColor: theme.colors.background }}
       onLayout={onLayoutRootView}
     >
       <StatusBar
